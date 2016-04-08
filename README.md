@@ -7,6 +7,6 @@
 You should just run following:
 
 ```
-origin_url='{ORIGIN URL HERE}' origin_domain='{ORIGIN DOMAIN NAME HERE}' aws cloudfront create-distribution --cli-input-json "$(curl -l -s https://raw.githubusercontent.com/amimoto-ami/create-cf-dist-settings/master/source_dist_setting.sh | sh)"
+origin_url='{ORIGIN URL HERE}' domain='{ORIGIN DOMAIN NAME HERE}' aws cloudfront create-distribution --cli-input-json "$(curl -l -s https://raw.githubusercontent.com/amimoto-ami/create-cf-dist-settings/master/source_dist_setting.sh | sh)"
 ```
 
