@@ -1,0 +1,306 @@
+{
+  "DistributionConfig": {
+    "Comment": "",
+    "CacheBehaviors": {
+      "Items": [
+        {
+          "TrustedSigners": {
+            "Enabled": false,
+            "Quantity": 0
+          },
+          "TargetOriginId": "%origin-id%",
+          "ViewerProtocolPolicy": "allow-all",
+          "ForwardedValues": {
+            "Headers": {
+              "Items": [
+                "CloudFront-Forwarded-Proto",
+                "CloudFront-Is-Desktop-Viewer",
+                "CloudFront-Is-Mobile-Viewer",
+                "CloudFront-Is-Tablet-Viewer",
+                "Host",
+                "User-Agent"
+              ],
+              "Quantity": 6
+            },
+            "Cookies": {
+              "Forward": "all"
+            },
+            "QueryString": true
+          },
+          "PathPattern": "*.php",
+          "SmoothStreaming": false,
+          "AllowedMethods": {
+            "Items": [
+              "HEAD",
+              "DELETE",
+              "POST",
+              "GET",
+              "OPTIONS",
+              "PUT",
+              "PATCH"
+            ],
+            "CachedMethods": {
+              "Items": [
+                "HEAD",
+                "GET"
+              ],
+              "Quantity": 2
+            },
+            "Quantity": 7
+          },
+          "MinTTL": 0
+        },
+        {
+          "TrustedSigners": {
+            "Enabled": false,
+            "Quantity": 0
+          },
+          "TargetOriginId": "%origin-id%",
+          "ViewerProtocolPolicy": "allow-all",
+          "ForwardedValues": {
+            "Headers": {
+              "Items": [
+                "Accept",
+                "Authorization",
+                "CloudFront-Forwarded-Proto",
+                "CloudFront-Is-Desktop-Viewer",
+                "CloudFront-Is-Mobile-Viewer",
+                "CloudFront-Is-Tablet-Viewer",
+                "Host",
+                "User-Agent"
+              ],
+              "Quantity": 8
+            },
+            "Cookies": {
+              "Forward": "all"
+            },
+            "QueryString": true
+          },
+          "PathPattern": "/wp-admin/*",
+          "SmoothStreaming": false,
+          "AllowedMethods": {
+            "Items": [
+              "HEAD",
+              "DELETE",
+              "POST",
+              "GET",
+              "OPTIONS",
+              "PUT",
+              "PATCH"
+            ],
+            "CachedMethods": {
+              "Items": [
+                "HEAD",
+                "GET"
+              ],
+              "Quantity": 2
+            },
+            "Quantity": 7
+          },
+          "MinTTL": 0
+        },
+        {
+          "TrustedSigners": {
+            "Enabled": false,
+            "Quantity": 0
+          },
+          "TargetOriginId": "%origin-id%",
+          "ViewerProtocolPolicy": "allow-all",
+          "ForwardedValues": {
+            "Headers": {
+              "Items": [
+                "Host"
+              ],
+              "Quantity": 1
+            },
+            "Cookies": {
+              "Forward": "none"
+            },
+            "QueryString": true
+          },
+          "PathPattern": "/wp-content/uploads/*",
+          "SmoothStreaming": false,
+          "AllowedMethods": {
+            "Items": [
+              "HEAD",
+              "GET"
+            ],
+            "CachedMethods": {
+              "Items": [
+                "HEAD",
+                "GET"
+              ],
+              "Quantity": 2
+            },
+            "Quantity": 2
+          },
+          "MinTTL": 43200
+        },
+        {
+          "TrustedSigners": {
+            "Enabled": false,
+            "Quantity": 0
+          },
+          "TargetOriginId": "%origin-id%",
+          "ViewerProtocolPolicy": "allow-all",
+          "ForwardedValues": {
+            "Headers": {
+              "Items": [
+                "Host"
+              ],
+              "Quantity": 1
+            },
+            "Cookies": {
+              "Forward": "none"
+            },
+            "QueryString": true
+          },
+          "PathPattern": "/wp-includes/*",
+          "SmoothStreaming": false,
+          "AllowedMethods": {
+            "Items": [
+              "HEAD",
+              "GET"
+            ],
+            "CachedMethods": {
+              "Items": [
+                "HEAD",
+                "GET"
+              ],
+              "Quantity": 2
+            },
+            "Quantity": 2
+          },
+          "MinTTL": 43200
+        },
+        {
+          "TrustedSigners": {
+            "Enabled": false,
+            "Quantity": 0
+          },
+          "TargetOriginId": "%origin-id%",
+          "ViewerProtocolPolicy": "allow-all",
+          "ForwardedValues": {
+            "Headers": {
+              "Items": [
+                "Host"
+              ],
+              "Quantity": 1
+            },
+            "Cookies": {
+              "Forward": "none"
+            },
+            "QueryString": true
+          },
+          "PathPattern": "/wp-content/*",
+          "SmoothStreaming": false,
+          "AllowedMethods": {
+            "Items": [
+              "HEAD",
+              "GET"
+            ],
+            "CachedMethods": {
+              "Items": [
+                "HEAD",
+                "GET"
+              ],
+              "Quantity": 2
+            },
+            "Quantity": 2
+          },
+          "MinTTL": 43200
+        }
+      ],
+      "Quantity": 5
+    },
+    "Logging": {
+      "Bucket": "",
+      "Prefix": "",
+      "Enabled": false,
+      "IncludeCookies": false
+    },
+    "Origins": {
+      "Items": [
+        {
+          "CustomOriginConfig": {
+            "OriginProtocolPolicy": "http-only",
+            "HTTPPort": 80,
+            "HTTPSPort": 443
+          },
+          "Id": "%origin-id%",
+          "DomainName": "origin.example.com"
+        }
+      ],
+      "Quantity": 1
+    },
+    "DefaultRootObject": "",
+    "PriceClass": "PriceClass_All",
+    "Enabled": true,
+    "DefaultCacheBehavior": {
+      "TrustedSigners": {
+        "Enabled": false,
+        "Quantity": 0
+      },
+      "TargetOriginId": "%origin-id%",
+      "ViewerProtocolPolicy": "allow-all",
+      "ForwardedValues": {
+        "Headers": {
+          "Items": [
+            "CloudFront-Forwarded-Proto",
+            "CloudFront-Is-Desktop-Viewer",
+            "CloudFront-Is-Mobile-Viewer",
+            "CloudFront-Is-Tablet-Viewer",
+            "Host"
+          ],
+          "Quantity": 5
+        },
+        "Cookies": {
+          "Forward": "whitelist",
+          "WhitelistedNames": {
+            "Items": [
+              "wordpress_*",
+              "wordpress_logged_in_*"
+            ],
+            "Quantity": 2
+          }
+        },
+        "QueryString": true
+      },
+      "SmoothStreaming": false,
+      "AllowedMethods": {
+        "Items": [
+          "HEAD",
+          "DELETE",
+          "POST",
+          "GET",
+          "OPTIONS",
+          "PUT",
+          "PATCH"
+        ],
+        "CachedMethods": {
+          "Items": [
+            "HEAD",
+            "GET"
+          ],
+          "Quantity": 2
+        },
+        "Quantity": 7
+      },
+      "MinTTL": 0
+    },
+    "CallerReference": "%caller-reference%",
+    "ViewerCertificate": {
+      "CloudFrontDefaultCertificate": true,
+      "MinimumProtocolVersion": "SSLv3"
+    },
+    "CustomErrorResponses": {
+      "Quantity": 0
+    },
+    "Restrictions": {
+      "GeoRestriction": {
+        "RestrictionType": "none",
+        "Quantity": 0
+      }
+    }
+  }
+}
