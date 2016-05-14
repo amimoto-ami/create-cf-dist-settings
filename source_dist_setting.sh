@@ -1,6 +1,6 @@
 #!/bin/sh
 if [ "${domain}" = "" ]; then
-  domain="${origin_domain}"
+  domain="${origin_url}"
 fi
 
 json_template='cloudfront-input.json'
