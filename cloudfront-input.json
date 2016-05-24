@@ -13,14 +13,16 @@
           "ForwardedValues": {
             "Headers": {
               "Items": [
+                "Authorization",
                 "CloudFront-Forwarded-Proto",
                 "CloudFront-Is-Desktop-Viewer",
                 "CloudFront-Is-Mobile-Viewer",
                 "CloudFront-Is-Tablet-Viewer",
                 "Host",
-                "User-Agent"
+                "User-Agent",
+                "Referer"
               ],
-              "Quantity": 6
+              "Quantity": 8
             },
             "Cookies": {
               "Forward": "all"
@@ -48,7 +50,8 @@
             },
             "Quantity": 7
           },
-          "MinTTL": 0
+          "MinTTL": 0,
+          "Compress": true
         },
         {
           "TrustedSigners": {
@@ -60,7 +63,6 @@
           "ForwardedValues": {
             "Headers": {
               "Items": [
-                "Accept",
                 "Authorization",
                 "CloudFront-Forwarded-Proto",
                 "CloudFront-Is-Desktop-Viewer",
@@ -69,7 +71,7 @@
                 "Host",
                 "User-Agent"
               ],
-              "Quantity": 8
+              "Quantity": 7
             },
             "Cookies": {
               "Forward": "all"
@@ -97,7 +99,8 @@
             },
             "Quantity": 7
           },
-          "MinTTL": 0
+          "MinTTL": 0,
+          "Compress": true
         },
         {
           "TrustedSigners": {
@@ -109,9 +112,10 @@
           "ForwardedValues": {
             "Headers": {
               "Items": [
+                "Authorization",
                 "Host"
               ],
-              "Quantity": 1
+              "Quantity": 2
             },
             "Cookies": {
               "Forward": "none"
@@ -134,7 +138,8 @@
             },
             "Quantity": 2
           },
-          "MinTTL": 43200
+          "MinTTL": 43200,
+          "Compress": true
         },
         {
           "TrustedSigners": {
@@ -146,9 +151,10 @@
           "ForwardedValues": {
             "Headers": {
               "Items": [
+                "Authorization",
                 "Host"
               ],
-              "Quantity": 1
+              "Quantity": 2
             },
             "Cookies": {
               "Forward": "none"
@@ -171,7 +177,8 @@
             },
             "Quantity": 2
           },
-          "MinTTL": 43200
+          "MinTTL": 43200,
+          "Compress": true
         },
         {
           "TrustedSigners": {
@@ -183,9 +190,10 @@
           "ForwardedValues": {
             "Headers": {
               "Items": [
+                "Authorization",
                 "Host"
               ],
-              "Quantity": 1
+              "Quantity": 2
             },
             "Cookies": {
               "Forward": "none"
@@ -208,7 +216,8 @@
             },
             "Quantity": 2
           },
-          "MinTTL": 43200
+          "MinTTL": 43200,
+          "Compress": true
         }
       ],
       "Quantity": 5
@@ -246,22 +255,24 @@
       "ForwardedValues": {
         "Headers": {
           "Items": [
+            "Authorization",
             "CloudFront-Forwarded-Proto",
             "CloudFront-Is-Desktop-Viewer",
             "CloudFront-Is-Mobile-Viewer",
             "CloudFront-Is-Tablet-Viewer",
             "Host"
           ],
-          "Quantity": 5
+          "Quantity": 6
         },
         "Cookies": {
           "Forward": "whitelist",
           "WhitelistedNames": {
             "Items": [
               "wordpress_*",
-              "wordpress_logged_in_*"
+              "wordpress_logged_in_*",
+              "wp-postpass_*"
             ],
-            "Quantity": 2
+            "Quantity": 3
           }
         },
         "QueryString": true
@@ -286,7 +297,8 @@
         },
         "Quantity": 7
       },
-      "MinTTL": 0
+      "MinTTL": 0,
+      "Compress": true
     },
     "CallerReference": "%caller-reference%",
     "ViewerCertificate": {
