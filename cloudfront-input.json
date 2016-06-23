@@ -69,9 +69,10 @@
                 "CloudFront-Is-Mobile-Viewer",
                 "CloudFront-Is-Tablet-Viewer",
                 "Host",
-                "User-Agent"
+                "User-Agent",
+                "Referer"
               ],
-              "Quantity": 7
+              "Quantity": 8
             },
             "Cookies": {
               "Forward": "all"
@@ -260,9 +261,10 @@
             "CloudFront-Is-Desktop-Viewer",
             "CloudFront-Is-Mobile-Viewer",
             "CloudFront-Is-Tablet-Viewer",
-            "Host"
+            "Host",
+            "Referer"
           ],
-          "Quantity": 6
+          "Quantity": 7
         },
         "Cookies": {
           "Forward": "whitelist",
