@@ -316,6 +316,7 @@
         "Quantity": 0
       }
     },
+    "HttpVersion": "http2",
     "Aliases": {
       "Items": [
         "www.example.com",

@@ -310,6 +310,7 @@
     "CustomErrorResponses": {
       "Quantity": 0
     },
+    "HttpVersion": "http2",
     "Restrictions": {
       "GeoRestriction": {
         "RestrictionType": "none",
