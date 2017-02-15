@@ -1,0 +1,615 @@
+{
+  "DistributionConfig": {
+    "Comment": "",
+    "CacheBehaviors": {
+      "Items": [
+        {
+          "TrustedSigners": {
+            "Enabled": false,
+            "Quantity": 0
+          },
+          "TargetOriginId": "%origin-id%",
+          "ViewerProtocolPolicy": "allow-all",
+          "ForwardedValues": {
+            "Headers": {
+              "Items": [
+                "Authorization",
+                "CloudFront-Forwarded-Proto",
+                "CloudFront-Is-Desktop-Viewer",
+                "CloudFront-Is-Mobile-Viewer",
+                "CloudFront-Is-Tablet-Viewer",
+                "Host",
+                "User-Agent",
+                "Referer"
+              ],
+              "Quantity": 8
+            },
+            "Cookies": {
+              "Forward": "all"
+            },
+            "QueryString": true
+          },
+          "PathPattern": "*.php",
+          "SmoothStreaming": false,
+          "AllowedMethods": {
+            "Items": [
+              "HEAD",
+              "DELETE",
+              "POST",
+              "GET",
+              "OPTIONS",
+              "PUT",
+              "PATCH"
+            ],
+            "CachedMethods": {
+              "Items": [
+                "HEAD",
+                "GET"
+              ],
+              "Quantity": 2
+            },
+            "Quantity": 7
+          },
+          "MinTTL": 0,
+          "Compress": true
+        },
+        {
+          "TrustedSigners": {
+            "Enabled": false,
+            "Quantity": 0
+          },
+          "TargetOriginId": "%origin-id%",
+          "ViewerProtocolPolicy": "allow-all",
+          "ForwardedValues": {
+            "Headers": {
+              "Items": [
+                "Authorization",
+                "CloudFront-Forwarded-Proto",
+                "CloudFront-Is-Desktop-Viewer",
+                "CloudFront-Is-Mobile-Viewer",
+                "CloudFront-Is-Tablet-Viewer",
+                "Host",
+                "User-Agent",
+                "Referer"
+              ],
+              "Quantity": 8
+            },
+            "Cookies": {
+              "Forward": "all"
+            },
+            "QueryString": true
+          },
+          "PathPattern": "/wp-admin/*",
+          "SmoothStreaming": false,
+          "AllowedMethods": {
+            "Items": [
+              "HEAD",
+              "DELETE",
+              "POST",
+              "GET",
+              "OPTIONS",
+              "PUT",
+              "PATCH"
+            ],
+            "CachedMethods": {
+              "Items": [
+                "HEAD",
+                "GET"
+              ],
+              "Quantity": 2
+            },
+            "Quantity": 7
+          },
+          "MinTTL": 0,
+          "Compress": true
+        },
+        {
+          "TrustedSigners": {
+            "Enabled": false,
+            "Quantity": 0
+          },
+          "TargetOriginId": "%origin-id%",
+          "ViewerProtocolPolicy": "allow-all",
+          "ForwardedValues": {
+            "Headers": {
+              "Items": [
+                "Authorization",
+                "Host"
+              ],
+              "Quantity": 2
+            },
+            "Cookies": {
+              "Forward": "none"
+            },
+            "QueryString": true
+          },
+          "PathPattern": "/wp-content/uploads/*",
+          "SmoothStreaming": false,
+          "AllowedMethods": {
+            "Items": [
+              "HEAD",
+              "GET"
+            ],
+            "CachedMethods": {
+              "Items": [
+                "HEAD",
+                "GET"
+              ],
+              "Quantity": 2
+            },
+            "Quantity": 2
+          },
+          "MinTTL": 43200,
+          "Compress": true
+        },
+        {
+          "TrustedSigners": {
+            "Enabled": false,
+            "Quantity": 0
+          },
+          "TargetOriginId": "%origin-id%",
+          "ViewerProtocolPolicy": "allow-all",
+          "ForwardedValues": {
+            "Headers": {
+              "Items": [
+                "Authorization",
+                "Host"
+              ],
+              "Quantity": 2
+            },
+            "Cookies": {
+              "Forward": "none"
+            },
+            "QueryString": true
+          },
+          "PathPattern": "/wp-includes/*",
+          "SmoothStreaming": false,
+          "AllowedMethods": {
+            "Items": [
+              "HEAD",
+              "GET"
+            ],
+            "CachedMethods": {
+              "Items": [
+                "HEAD",
+                "GET"
+              ],
+              "Quantity": 2
+            },
+            "Quantity": 2
+          },
+          "MinTTL": 43200,
+          "Compress": true
+        },
+        {
+          "TrustedSigners": {
+            "Enabled": false,
+            "Quantity": 0
+          },
+          "TargetOriginId": "%origin-id%",
+          "ViewerProtocolPolicy": "allow-all",
+          "ForwardedValues": {
+            "Headers": {
+              "Items": [
+                "Authorization",
+                "Host"
+              ],
+              "Quantity": 2
+            },
+            "Cookies": {
+              "Forward": "none"
+            },
+            "QueryString": true
+          },
+          "PathPattern": "/wp-content/*",
+          "SmoothStreaming": false,
+          "AllowedMethods": {
+            "Items": [
+              "HEAD",
+              "GET"
+            ],
+            "CachedMethods": {
+              "Items": [
+                "HEAD",
+                "GET"
+              ],
+              "Quantity": 2
+            },
+            "Quantity": 2
+          },
+          "MinTTL": 43200,
+          "Compress": true
+        },
+      {
+        "TrustedSigners": {
+          "Enabled": false,
+          "Quantity": 0
+        },
+        "TargetOriginId": "ELB-digitalcube-elb",
+        "ViewerProtocolPolicy": "redirect-to-https",
+        "ForwardedValues": {
+          "Headers": {
+            "Items": [
+              "*"
+            ],
+            "Quantity": 1
+          },
+          "Cookies": {
+            "Forward": "all"
+          },
+          "QueryStringCacheKeys": {
+            "Quantity": 0
+          },
+          "QueryString": true
+        },
+        "MaxTTL": 0,
+        "PathPattern": "/%slug-product%/*",
+        "SmoothStreaming": false,
+        "DefaultTTL": 0,
+        "AllowedMethods": {
+          "Items": [
+            "HEAD",
+            "DELETE",
+            "POST",
+            "GET",
+            "OPTIONS",
+            "PUT",
+            "PATCH"
+          ],
+          "CachedMethods": {
+            "Items": [
+              "HEAD",
+              "GET"
+            ],
+            "Quantity": 2
+          },
+          "Quantity": 7
+        },
+        "MinTTL": 0,
+        "Compress": true
+      },
+      {
+        "TrustedSigners": {
+          "Enabled": false,
+          "Quantity": 0
+        },
+        "TargetOriginId": "ELB-digitalcube-elb",
+        "ViewerProtocolPolicy": "redirect-to-https",
+        "ForwardedValues": {
+          "Headers": {
+            "Items": [
+              "*"
+            ],
+            "Quantity": 1
+          },
+          "Cookies": {
+            "Forward": "all"
+          },
+          "QueryStringCacheKeys": {
+            "Quantity": 0
+          },
+          "QueryString": true
+        },
+        "MaxTTL": 0,
+        "PathPattern": "/%slug-cart%/*",
+        "SmoothStreaming": false,
+        "DefaultTTL": 0,
+        "AllowedMethods": {
+          "Items": [
+            "HEAD",
+            "DELETE",
+            "POST",
+            "GET",
+            "OPTIONS",
+            "PUT",
+            "PATCH"
+          ],
+          "CachedMethods": {
+            "Items": [
+              "HEAD",
+              "GET"
+            ],
+            "Quantity": 2
+          },
+          "Quantity": 7
+        },
+        "MinTTL": 0,
+        "Compress": true
+      },
+      {
+        "TrustedSigners": {
+          "Enabled": false,
+          "Quantity": 0
+        },
+        "TargetOriginId": "ELB-digitalcube-elb",
+        "ViewerProtocolPolicy": "redirect-to-https",
+        "ForwardedValues": {
+          "Headers": {
+            "Items": [
+              "*"
+            ],
+            "Quantity": 1
+          },
+          "Cookies": {
+            "Forward": "all"
+          },
+          "QueryStringCacheKeys": {
+            "Quantity": 0
+          },
+          "QueryString": true
+        },
+        "MaxTTL": 0,
+        "PathPattern": "/%slug-category%/*",
+        "SmoothStreaming": false,
+        "DefaultTTL": 0,
+        "AllowedMethods": {
+          "Items": [
+            "HEAD",
+            "DELETE",
+            "POST",
+            "GET",
+            "OPTIONS",
+            "PUT",
+            "PATCH"
+          ],
+          "CachedMethods": {
+            "Items": [
+              "HEAD",
+              "GET"
+            ],
+            "Quantity": 2
+          },
+          "Quantity": 7
+        },
+        "MinTTL": 0,
+        "Compress": true
+      },
+      {
+        "TrustedSigners": {
+          "Enabled": false,
+          "Quantity": 0
+        },
+        "TargetOriginId": "ELB-digitalcube-elb",
+        "ViewerProtocolPolicy": "redirect-to-https",
+        "ForwardedValues": {
+          "Headers": {
+            "Items": [
+              "*"
+            ],
+            "Quantity": 1
+          },
+          "Cookies": {
+            "Forward": "all"
+          },
+          "QueryStringCacheKeys": {
+            "Quantity": 0
+          },
+          "QueryString": true
+        },
+        "MaxTTL": 0,
+        "PathPattern": "/%slug-tag%/*",
+        "SmoothStreaming": false,
+        "DefaultTTL": 0,
+        "AllowedMethods": {
+          "Items": [
+            "HEAD",
+            "DELETE",
+            "POST",
+            "GET",
+            "OPTIONS",
+            "PUT",
+            "PATCH"
+          ],
+          "CachedMethods": {
+            "Items": [
+              "HEAD",
+              "GET"
+            ],
+            "Quantity": 2
+          },
+          "Quantity": 7
+        },
+        "MinTTL": 0,
+        "Compress": true
+      },
+      {
+        "TrustedSigners": {
+          "Enabled": false,
+          "Quantity": 0
+        },
+        "TargetOriginId": "ELB-digitalcube-elb",
+        "ViewerProtocolPolicy": "redirect-to-https",
+        "ForwardedValues": {
+          "Headers": {
+            "Items": [
+              "*"
+            ],
+            "Quantity": 1
+          },
+          "Cookies": {
+            "Forward": "all"
+          },
+          "QueryStringCacheKeys": {
+            "Quantity": 0
+          },
+          "QueryString": true
+        },
+        "MaxTTL": 0,
+        "PathPattern": "/%slug-account%/*",
+        "SmoothStreaming": false,
+        "DefaultTTL": 0,
+        "AllowedMethods": {
+          "Items": [
+            "HEAD",
+            "DELETE",
+            "POST",
+            "GET",
+            "OPTIONS",
+            "PUT",
+            "PATCH"
+          ],
+          "CachedMethods": {
+            "Items": [
+              "HEAD",
+              "GET"
+            ],
+            "Quantity": 2
+          },
+          "Quantity": 7
+        },
+        "MinTTL": 0,
+        "Compress": true
+      },
+      {
+        "TrustedSigners": {
+          "Enabled": false,
+          "Quantity": 0
+        },
+        "TargetOriginId": "ELB-digitalcube-elb",
+        "ViewerProtocolPolicy": "redirect-to-https",
+        "ForwardedValues": {
+          "Headers": {
+            "Items": [
+              "*"
+            ],
+            "Quantity": 1
+          },
+          "Cookies": {
+            "Forward": "all"
+          },
+          "QueryStringCacheKeys": {
+            "Quantity": 0
+          },
+          "QueryString": true
+        },
+        "MaxTTL": 0,
+        "PathPattern": "/%slug-checkout%/*",
+        "SmoothStreaming": false,
+        "DefaultTTL": 0,
+        "AllowedMethods": {
+          "Items": [
+            "HEAD",
+            "DELETE",
+            "POST",
+            "GET",
+            "OPTIONS",
+            "PUT",
+            "PATCH"
+          ],
+          "CachedMethods": {
+            "Items": [
+              "HEAD",
+              "GET"
+            ],
+            "Quantity": 2
+          },
+          "Quantity": 7
+        },
+        "MinTTL": 0,
+        "Compress": true
+      }
+      ],
+      "Quantity": 11
+    },
+    "Logging": {
+      "Bucket": "",
+      "Prefix": "",
+      "Enabled": false,
+      "IncludeCookies": false
+    },
+    "Origins": {
+      "Items": [
+        {
+          "CustomOriginConfig": {
+            "OriginProtocolPolicy": "http-only",
+            "HTTPPort": 80,
+            "HTTPSPort": 443
+          },
+          "Id": "%origin-id%",
+          "DomainName": "origin.example.com"
+        }
+      ],
+      "Quantity": 1
+    },
+    "DefaultRootObject": "",
+    "PriceClass": "PriceClass_All",
+    "Enabled": true,
+    "DefaultCacheBehavior": {
+      "TrustedSigners": {
+        "Enabled": false,
+        "Quantity": 0
+      },
+      "TargetOriginId": "%origin-id%",
+      "ViewerProtocolPolicy": "allow-all",
+      "ForwardedValues": {
+        "Headers": {
+          "Items": [
+            "Authorization",
+            "CloudFront-Forwarded-Proto",
+            "CloudFront-Is-Desktop-Viewer",
+            "CloudFront-Is-Mobile-Viewer",
+            "CloudFront-Is-Tablet-Viewer",
+            "Host",
+            "Referer"
+          ],
+          "Quantity": 7
+        },
+        "Cookies": {
+          "Forward": "whitelist",
+          "WhitelistedNames": {
+            "Items": [
+              "wordpress_*",
+              "wordpress_logged_in_*",
+              "wp-postpass_*"
+            ],
+            "Quantity": 3
+          }
+        },
+        "QueryString": true
+      },
+      "SmoothStreaming": false,
+      "AllowedMethods": {
+        "Items": [
+          "HEAD",
+          "DELETE",
+          "POST",
+          "GET",
+          "OPTIONS",
+          "PUT",
+          "PATCH"
+        ],
+        "CachedMethods": {
+          "Items": [
+            "HEAD",
+            "GET"
+          ],
+          "Quantity": 2
+        },
+        "Quantity": 7
+      },
+      "MinTTL": 0,
+      "Compress": true
+    },
+    "CallerReference": "%caller-reference%",
+    "ViewerCertificate": {
+      "CloudFrontDefaultCertificate": true,
+      "MinimumProtocolVersion": "SSLv3"
+    },
+    "CustomErrorResponses": {
+      "Quantity": 0
+    },
+    "Restrictions": {
+      "GeoRestriction": {
+        "RestrictionType": "none",
+        "Quantity": 0
+      }
+    },
+    "Aliases": {
+      "Items": [
+        "www.example.com",
+        "example.com"
+      ],
+      "Quantity": 2
+    }
+  }
+}
