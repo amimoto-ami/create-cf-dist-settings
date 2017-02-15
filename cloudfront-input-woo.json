@@ -225,7 +225,7 @@
           "Enabled": false,
           "Quantity": 0
         },
-        "TargetOriginId": "ELB-digitalcube-elb",
+        "TargetOriginId": "%origin-id%",
         "ViewerProtocolPolicy": "redirect-to-https",
         "ForwardedValues": {
           "Headers": {
@@ -273,7 +273,7 @@
           "Enabled": false,
           "Quantity": 0
         },
-        "TargetOriginId": "ELB-digitalcube-elb",
+        "TargetOriginId": "%origin-id%",
         "ViewerProtocolPolicy": "redirect-to-https",
         "ForwardedValues": {
           "Headers": {
@@ -321,7 +321,7 @@
           "Enabled": false,
           "Quantity": 0
         },
-        "TargetOriginId": "ELB-digitalcube-elb",
+        "TargetOriginId": "%origin-id%",
         "ViewerProtocolPolicy": "redirect-to-https",
         "ForwardedValues": {
           "Headers": {
@@ -369,7 +369,7 @@
           "Enabled": false,
           "Quantity": 0
         },
-        "TargetOriginId": "ELB-digitalcube-elb",
+        "TargetOriginId": "%origin-id%",
         "ViewerProtocolPolicy": "redirect-to-https",
         "ForwardedValues": {
           "Headers": {
@@ -417,7 +417,7 @@
           "Enabled": false,
           "Quantity": 0
         },
-        "TargetOriginId": "ELB-digitalcube-elb",
+        "TargetOriginId": "%origin-id%",
         "ViewerProtocolPolicy": "redirect-to-https",
         "ForwardedValues": {
           "Headers": {
@@ -465,7 +465,7 @@
           "Enabled": false,
           "Quantity": 0
         },
-        "TargetOriginId": "ELB-digitalcube-elb",
+        "TargetOriginId": "%origin-id%",
         "ViewerProtocolPolicy": "redirect-to-https",
         "ForwardedValues": {
           "Headers": {
