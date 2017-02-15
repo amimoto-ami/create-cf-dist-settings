@@ -1,14 +1,6 @@
 #!/bin/sh
-#read -p "Set your origin webserver: " origin_url
-if [ "${origin_url}" = "" ]; then
-    echo "webserver is required"
-    exit 1
-fi
-#read -p "Set your website domain: " domain
 if [ "${domain}" = "" ]; then
-  echo "non-origin is not support now"
-  exit 1
-  #domain="${origin_url}"
+  domain="${origin_url}"
 fi
 
 if [ "${slug-product}" = "" ]; then
@@ -30,7 +22,7 @@ if [ "${slug-checkout}" = "" ]; then
   slug-checkout="checkout"
 fi
 
-json_template='cloudfront-input-woo.json'
+json_template='cloudfront-input-woo.json?1'
 if [ "${domain}" = "" ]; then
   json_template='cloudfront-input-no-aliases.json'
 fi
