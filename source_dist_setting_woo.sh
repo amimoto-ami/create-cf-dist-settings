@@ -1,10 +1,10 @@
 #!/bin/sh
-read -p "Set your origin webserver: " origin_url
+#read -p "Set your origin webserver: " origin_url
 if [ "${origin_url}" = "" ]; then
     echo "webserver is required"
     exit 1
 fi
-read -p "Set your website domain: " domain
+#read -p "Set your website domain: " domain
 if [ "${domain}" = "" ]; then
   echo "non-origin is not support now"
   exit 1
