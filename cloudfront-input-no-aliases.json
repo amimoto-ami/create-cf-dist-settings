@@ -15,14 +15,11 @@
               "Items": [
                 "Authorization",
                 "CloudFront-Forwarded-Proto",
-                "CloudFront-Is-Desktop-Viewer",
-                "CloudFront-Is-Mobile-Viewer",
-                "CloudFront-Is-Tablet-Viewer",
                 "Host",
                 "User-Agent",
                 "Referer"
               ],
-              "Quantity": 8
+              "Quantity": 5
             },
             "Cookies": {
               "Forward": "all"
@@ -65,21 +62,18 @@
               "Items": [
                 "Authorization",
                 "CloudFront-Forwarded-Proto",
-                "CloudFront-Is-Desktop-Viewer",
-                "CloudFront-Is-Mobile-Viewer",
-                "CloudFront-Is-Tablet-Viewer",
                 "Host",
                 "User-Agent",
                 "Referer"
               ],
-              "Quantity": 8
+              "Quantity": 5
             },
             "Cookies": {
               "Forward": "all"
             },
             "QueryString": true
           },
-          "PathPattern": "/wp-admin/*",
+          "PathPattern": "wp-admin/*",
           "SmoothStreaming": false,
           "AllowedMethods": {
             "Items": [
@@ -114,16 +108,17 @@
             "Headers": {
               "Items": [
                 "Authorization",
+                "CloudFront-Forwarded-Proto",
                 "Host"
               ],
-              "Quantity": 2
+              "Quantity": 3
             },
             "Cookies": {
               "Forward": "none"
             },
             "QueryString": true
           },
-          "PathPattern": "/wp-content/uploads/*",
+          "PathPattern": "wp-content/uploads/*",
           "SmoothStreaming": false,
           "AllowedMethods": {
             "Items": [
@@ -153,16 +148,17 @@
             "Headers": {
               "Items": [
                 "Authorization",
+                "CloudFront-Forwarded-Proto",
                 "Host"
               ],
-              "Quantity": 2
+              "Quantity": 3
             },
             "Cookies": {
               "Forward": "none"
             },
             "QueryString": true
           },
-          "PathPattern": "/wp-includes/*",
+          "PathPattern": "wp-includes/*",
           "SmoothStreaming": false,
           "AllowedMethods": {
             "Items": [
@@ -192,16 +188,17 @@
             "Headers": {
               "Items": [
                 "Authorization",
+                "CloudFront-Forwarded-Proto",
                 "Host"
               ],
-              "Quantity": 2
+              "Quantity": 3
             },
             "Cookies": {
               "Forward": "none"
             },
             "QueryString": true
           },
-          "PathPattern": "/wp-content/*",
+          "PathPattern": "wp-content/*",
           "SmoothStreaming": false,
           "AllowedMethods": {
             "Items": [
